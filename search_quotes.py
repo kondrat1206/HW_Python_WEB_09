@@ -98,6 +98,7 @@ def search_quotes(command):
 
 
 def delete_data_files():
+
     try:
         os.remove('quotes.json')
         os.remove('authors.json')
@@ -107,6 +108,7 @@ def delete_data_files():
 
 
 def delete_mongo_collections():
+    
     try:
         db = get_db()
         db.drop_collection('author')
